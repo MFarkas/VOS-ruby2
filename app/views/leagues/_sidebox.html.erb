@@ -12,13 +12,5 @@
       <%end%>
     </ul>
   </section>
-    <% if !@league.isParticipating?(current_user)%>
-        <%= form_for @participate do |f| %>
-            <div style="float: left; width: 100%">
-              <%= f.hidden_field(:league_id,  :league_id => @league.id) %>
-              <%= f.submit "Join", class: "btn btn-large btn-primary" %>
-            </div>
-        <% end %>
-    <%end%>
 </aside2>
 </div>
