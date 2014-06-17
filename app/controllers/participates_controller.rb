@@ -1,6 +1,6 @@
 class ParticipatesController < ApplicationController
   def create
-    @league= League.find_by(params[:participate][:league_id])
+    @league= League.find_by(id: params[:participate][:league_id])
     @league.participate(current_user)
     redirect_to @league
   end
