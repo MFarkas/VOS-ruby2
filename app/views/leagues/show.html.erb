@@ -7,7 +7,7 @@
     <%= render @league.newsposts.reverse %>
   </ul>
 </div>
-<% if !@league.isParticipating?(current_user)%>
+<% if signed_in? AND  !@league.isParticipating?(current_user)%>
     <%= form_for @participate do |f| %>
         <div style="float: left; width: 80%">
           <%= f.hidden_field(:league_id,  :value => @league.id) %>
