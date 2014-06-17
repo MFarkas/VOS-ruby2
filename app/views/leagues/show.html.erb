@@ -7,13 +7,3 @@
     <%= render @league.newsposts.reverse %>
   </ul>
 </div>
-<div style="float: left; width: 20%">
-<% if !@league.isParticipating?(current_user)%>
-<%= form_for @participate do |f| %>
-    <div style="float: left; width: 51%">
-      <%= f.hidden_field(:league_id,  :league_id => @league.id) %>
-      <%= f.submit "Join", class: "btn btn-large btn-primary" %>
-    </div>
-<% end %>
-<%end%>
-</div>

@@ -27,10 +27,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="leaderboards.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/leaderboards.html.erb">
+      <file leaf-file-name="leagues_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/leagues_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="102" selection-end="102" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="391">
+            <state line="23" column="24" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1870">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="league.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/league.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="51" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1037">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="9" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/leagues/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="255">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -38,31 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/index.html.erb">
+      <file leaf-file-name="_sidebox.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/leagues/_sidebox.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="151" selection-end="151" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="events.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/events.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="61" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="561">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="325" selection-end="325" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="595">
+            <state line="22" column="0" selection-start="934" selection-end="934" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="493">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#aside2#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="55" selection-start="344" selection-end="344" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="646">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,16 +103,24 @@
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/help.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="6" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-14.230769" vertical-offset="38" max-vertical-offset="510">
-              <folding />
+              <folding>
+                <marker date="1402969547232" expanded="true" signature="71:1022" placeholder="..." />
+                <marker date="1402969547232" expanded="true" signature="75:177" placeholder="..." />
+                <marker date="1402969547232" expanded="true" signature="181:316" placeholder="..." />
+                <marker date="1402969547232" expanded="true" signature="320:576" placeholder="..." />
+                <marker date="1402969547232" expanded="true" signature="580:817" placeholder="..." />
+                <marker date="1402969547232" expanded="true" signature="821:1015" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/leagues/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="48" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1207">
+            <state line="27" column="72" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.8947368" vertical-offset="68" max-vertical-offset="1207">
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -106,31 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="20" selection-start="644" selection-end="644" vertical-scroll-proportion="0.640873" vertical-offset="0" max-vertical-offset="986">
+            <state line="5" column="9" selection-start="127" selection-end="130" vertical-scroll-proportion="-3.0357144" vertical-offset="0" max-vertical-offset="918">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participants.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/participants.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="159" selection-end="159" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_league.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/leagues/_league.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="9" selection-start="10" selection-end="10" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="170">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -169,9 +176,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/league.js.coffee" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
         <option value="$PROJECT_DIR$/app/controllers/participates_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/league.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
@@ -182,13 +187,9 @@
         <option value="$PROJECT_DIR$/app/views/users/participations.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/events.html.erb" />
         <option value="$PROJECT_DIR$/app/views/newsposts/_newspost.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/leagues_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/leagues/_sidebox.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/leagues/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/leagues/_league.html.erb" />
         <option value="$PROJECT_DIR$/app/views/leagues/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/leagues/events.html.erb" />
@@ -197,15 +198,22 @@
         <option value="$PROJECT_DIR$/app/views/leagues/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/leagues/manage.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/help.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/leagues/new.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
+        <option value="$PROJECT_DIR$/app/views/leagues/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/league.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/leagues_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/leagues/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/leagues/_sidebox.html.erb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="960" />
+    <option name="y" value="18" />
     <option name="width" value="960" />
-    <option name="height" value="1080" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -901,11 +909,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="960" y="18" width="960" height="1062" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36570248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37263158" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32747933" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -979,13 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/league.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
@@ -1035,13 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="674" selection-end="674" vertical-scroll-proportion="0.1625239" vertical-offset="255" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/league.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.095684804" vertical-offset="0" max-vertical-offset="533">
@@ -1061,13 +1055,6 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/participates_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="61" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/league.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>
@@ -1096,15 +1083,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/newsposts/_newspost.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/leagues_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="55" selection-start="2280" selection-end="2280" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1870">
           <folding />
         </state>
       </provider>
@@ -1154,9 +1132,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/participations.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,9 +1153,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/events.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="17" selection-start="312" selection-end="317" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="459">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,9 +1195,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/_sidebox.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="12" selection-start="13" selection-end="13" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="289">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1234,44 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/leagues/_sidebox.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="49" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="491">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/leagues/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="111" selection-end="111" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="408">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/leagues/search.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="22" selection-start="236" selection-end="236" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="952">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="339" selection-end="339" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1287,7 +1225,9 @@
     <entry file="file://$PROJECT_DIR$/app/views/leagues/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="151" selection-end="151" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-          <folding />
+          <folding>
+            <marker date="1402968820455" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,14 +1277,83 @@
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/help.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="6" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-14.230769" vertical-offset="38" max-vertical-offset="510">
+          <folding>
+            <marker date="1402969547232" expanded="true" signature="71:1022" placeholder="..." />
+            <marker date="1402969547232" expanded="true" signature="75:177" placeholder="..." />
+            <marker date="1402969547232" expanded="true" signature="181:316" placeholder="..." />
+            <marker date="1402969547232" expanded="true" signature="320:576" placeholder="..." />
+            <marker date="1402969547232" expanded="true" signature="580:817" placeholder="..." />
+            <marker date="1402969547232" expanded="true" signature="821:1015" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="127" selection-end="130" vertical-scroll-proportion="-3.0357144" vertical-offset="0" max-vertical-offset="918">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="55" selection-start="344" selection-end="344" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="42" selection-start="187" selection-end="187" vertical-scroll-proportion="-2.3326654" vertical-offset="1249" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/league.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="51" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/leagues_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/leagues/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="255">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/leagues/_sidebox.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="934" selection-end="934" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="493">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#aside2#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/leagues/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="48" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1207">
+        <state line="27" column="72" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.8947368" vertical-offset="68" max-vertical-offset="1207">
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1353,13 +1362,6 @@
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="644" selection-end="644" vertical-scroll-proportion="0.640873" vertical-offset="0" max-vertical-offset="986">
-          <folding />
         </state>
       </provider>
     </entry>

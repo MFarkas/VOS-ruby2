@@ -13,13 +13,13 @@
         <div style="float: left; width: 100%">
         <div style="float: left; width: 43%">
            <%=label_tag :location_id, 'Location' %>
-           <%= f.collection_select :loc, Location.order("name"), :id, :name %>
+           <%= f.collection_select :loc, Location.order("name"), :id, :name, {:selected => Location.find_by(name: " Other").id} %>
            <%= f.text_field :slocation %>
         </div>
 
         <div style="float: right; width: 43%">
           <%=label_tag :location_id, 'Discipline' %>
-          <%= f.collection_select :discipline_id, Discipline.order("name"), :id, :name %>
+          <%= f.collection_select :discipline_id, Discipline.order("name"), :id, :name, {:selected => Discipline.find_by(name: " Other").id} %>
           <%= f.text_field :sdiscipline %>
         </div>
         </div>

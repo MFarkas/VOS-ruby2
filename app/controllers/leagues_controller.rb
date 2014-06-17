@@ -18,10 +18,10 @@ class LeaguesController < ApplicationController
     end
 
     di= Discipline.find_by(id: league_params[:discipline_id])
-    if di.name = " Other"
+    if di.name == " Other"
       d=Discipline.new(:name => league_params[:sdiscipline])
       d.save!
-      @league.setDisc!!(d)
+      @league.setDisc!(d)
     else
     d= Discipline.where("id = ? ", league_params[:discipline_id]).first
     @league.setDisc!(d)
