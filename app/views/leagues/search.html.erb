@@ -36,16 +36,21 @@
 
   <hr>
 
-  <% if  @leagues.nil? || @leagues.count == 0  %>
+ <% if  !signed_in? && ( @leagues.nil? || @leagues.count == 0)  %>
+      <div class="well">
+        <big>Sorry, we have no leagues that fulfill your requirements.</big>
+      </div>
+  <% elsif  @leagues.nil? || @leagues.count == 0 %>
       <div class="well">
         <big>Sorry, we have no leagues that fulfill your requirements. You can <%= link_to "create", new_league_path %> your own league</big>
       </div>
-      <%else%>
+  <%else%>
       <%= will_paginate(@leagues) %>
       <%= render @leagues %>
       <%= will_paginate(@leagues) %>
-  <% end %>
 
+
+  <% end %>
 
 
 </div>
