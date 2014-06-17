@@ -1,0 +1,30 @@
+<% provide(:title, @user.name) %>
+<div class = "well" style= "padding-top: 20px; width: 20%;float: left" >
+  <aside class="span5">
+    <section>
+      <h1>
+        <%= @user.name %>
+
+
+      </h1>
+      <%= gravatar_for @user %>
+    </section>
+    <%= render "sidebox" %>
+  </aside>
+</div>
+<div class = "well" style="float: right; width: 70%"  >
+  <div style=" float: left ; padding-left: 50%;width: 50%  " >
+  <h3>News</h3>
+  </div>
+  <div style=" float: left ;padding: 5px 5px 5px 5px;margin: 5px 5px 5px 5px;  background-color: #eeeeee ; width: 100%  " >
+    <%  @news.each do |newspost| %>
+        <h5><%= newspost.title%>  (<%=newspost.league.name %>)</h5>
+        <div style="padding: 7px 5px 5px 10px">
+          <div> <%= word_wrap newspost.textcontent, line_width: 10 %></div>
+        </div>
+    <%end%>
+  </div>
+
+
+</div>
+

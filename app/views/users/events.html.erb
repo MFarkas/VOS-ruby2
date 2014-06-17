@@ -1,0 +1,22 @@
+<% provide(:title, "My Events") %>
+<div style= "padding-top: 20px; width: 20%;float: left" >
+  <aside class="span5">
+    <section>
+      <h1>
+        <%= @user.name %>
+
+
+      </h1>
+      <%= gravatar_for @user %>
+    </section>
+    <%= render "sidebox" %>
+  </aside>
+</div>
+<h1>Upcoming events</h1>
+<div style="float: right; width: 80%;padding-top: 10px" >
+    <section>
+      <ul>
+        <%= render @user.events %>
+      </ul>
+    </section>
+</div>

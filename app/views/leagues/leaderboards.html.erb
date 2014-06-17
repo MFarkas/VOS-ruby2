@@ -1,0 +1,17 @@
+<% provide(:title, @league.name) %>
+<h1>Leaderboards</h1>
+<%= render "sidebox" %>
+<div class = "well" style="float: right; width: 50%">
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Total Score</th>
+  </tr>
+  <% @points.each do |point| %>
+      <tr>
+        <td> <%= point.name %> </td>
+        <td><%= point.totalscore %></td>
+      </tr>
+  <%end%>
+</table>
+</div>

@@ -1,0 +1,2 @@
+module PartInEventsHelper
+end

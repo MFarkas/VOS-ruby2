@@ -1,0 +1,21 @@
+<% provide(:title, 'Close event') %>
+<h1>All participants</h1>
+<div class= "row">
+  <%= render "sidebox"%>
+  <aside3 class="span5">
+    <ul class="users">
+      <%= form_for @event do |f| %>
+        <% @event.part_in_events.each do |part_in_event| %>
+          <li>
+            <%= f.fields_for :part_in_events, part_in_event do |p| %>
+                <%=  f.label part_in_event.user.name%>
+                <%= p.text_field :score %>
+                <%= p.hidden_field :part_in_event_id,:value=> part_in_event.id %>
+            <%end%>
+          </li>
+       <%end%>
+          <%= f.submit "Close Event", class: "btn btn-large btn-primary" %>
+      <%end%>
+    </ul>
+  </aside3>
+</div>

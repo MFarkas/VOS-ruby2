@@ -1,0 +1,29 @@
+<% provide(:title, 'Pick participants') %>
+<h1>Pick participants</h1>
+<div class= "row">
+  <aside3 class="span5">
+    <ul class="users">
+
+      <%= will_paginate @participants %>
+      <ul class="leagues">
+        <% @participants.each do |participant| %>
+            <%if participant.state == 1%>
+            <li>
+              <%= gravatar_for participant.user %>
+              <%= link_to participant.user.name, participant.user %>
+              <% if !@event.users.find_by(id: participant.user.id)%>
+                  <%=link_to 'Pick', pick_part_in_event_path(:pid=> participant.id) %>
+              <% else %>
+                  <%=link_to 'Unpick', unpick_part_in_event_path(:pid=> participant.id) %>
+              <% end%>
+            </li>
+            <%end%>
+        <% end %>
+      </ul>
+      <%= will_paginate @participants %>
+    </ul>
+    <div>
+    <%=link_to 'Done', manage_league_path(:id => @event.league_id) %>
+        </div>
+  </aside3>
+</div>

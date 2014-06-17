@@ -1,0 +1,28 @@
+<% provide(:title, 'League events') %>
+<h1>League Events</h1>
+
+  <%= render "sidebox"%>
+<div class = "well" style="float: left; width: 50%; margin: 0px 10px 10px 10px">
+  <aside3 class="span5">
+    <ul class="users">
+
+      <%= will_paginate @events %>
+      <ul class="leagues">
+        <% @events.each do |event| %>
+            <%if event.closed== false%>
+            <li>
+              <div><%= event.name %></div>
+              <div><%= event.date %></div>
+              <div><%= event.address %></div>
+              <div><%= event.info %></div>
+            </li>
+            <% if @league.isAdmin?(current_user)%>
+                <%=link_to 'Close', closeevent_league_path(:eid=> event.id) %>
+            <%end%>
+            <%end%>
+        <% end %>
+      </ul>
+      <%= will_paginate @events %>
+    </ul>
+  </aside3>
+</div>

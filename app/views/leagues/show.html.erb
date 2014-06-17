@@ -1,0 +1,19 @@
+<% provide(:title, @league.name) %>
+<h1><%= @league.name %></h1>
+  <%= render "sidebox"%>
+
+<div class = "well" style="float: right; width: 70% ;padding:  10px 10px 10px 10px " >
+  <ul class="users">
+    <%= render @league.newsposts.reverse %>
+  </ul>
+</div>
+<div style="float: left; width: 20%">
+<% if !@league.isParticipating?(current_user)%>
+<%= form_for @participate do |f| %>
+    <div style="float: left; width: 51%">
+      <%= f.hidden_field(:league_id,  :league_id => @league.id) %>
+      <%= f.submit "Join", class: "btn btn-large btn-primary" %>
+    </div>
+<% end %>
+<%end%>
+</div>

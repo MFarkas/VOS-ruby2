@@ -1,0 +1,51 @@
+<% provide(:title, "Search leagues") %>
+
+<div class="row">
+
+  <%= form_tag '/searchleague', method: :get do %>
+
+      <div class="well">
+        <div style="clear:both"></div>
+
+
+        <div style="width: 100%;">
+
+          <div style="float: left; width: 43%">
+          <%= label_tag :location_id, 'Location' %>
+          <%= collection_select(:location_id, nil , Location.order('name'), :id, :name, {:selected => @location}) %>
+        </div>
+
+          <div style="float: left; width: 43%">
+            <%= label_tag :location_id, 'Discipline' %>
+            <%= collection_select(:discipline_id, nil , Discipline.order('name'), :id, :name, {:selected => @location}) %>
+          </div>
+
+          <div style="float: right;">
+            <%= submit_tag '  Search  ', class: "btn btn-large btn-primary" %>
+          </div>
+
+        </div>
+
+        <div style="clear:both"></div>
+
+      </div>
+
+  <% end %>
+
+  <h3>Found Leagues: </h3>
+
+  <hr>
+
+  <% if  @leagues.nil? || @leagues.count == 0  %>
+      <div class="well">
+        <big>Sorry, we have no leagues that fulfill your requirements. You can <%= link_to "create", new_league_path %> your own league</big>
+      </div>
+      <%else%>
+      <%= will_paginate(@leagues) %>
+      <%= render @leagues %>
+      <%= will_paginate(@leagues) %>
+  <% end %>
+
+
+
+</div>

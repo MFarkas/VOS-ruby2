@@ -17,7 +17,12 @@ gem 'rspec-rails', '2.13.1'
 gem 'selenium-webdriver', '2.35.1'
 gem 'capybara', '2.1.0'
 gem 'pg', '0.15.1'
+group :production do
+  gem 'rails_12factor', '0.0.2'
+end
 gem 'rails_12factor', '0.0.2'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -26,7 +31,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+gem 'bcrypt-ruby' , '3.1.2'
+gem 'faker' ,'1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-datepicker-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

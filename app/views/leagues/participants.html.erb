@@ -1,0 +1,44 @@
+<% provide(:title, 'All participants') %>
+<h1>All participants</h1>
+<%= render "sidebox"%>
+
+<div class= "row">
+
+  <aside3 class="span5">
+    <div class="well">
+    <ul class="users">
+
+      <%= will_paginate @participants %>
+      <ul class="leagues">
+        <% @participants.each do |participant| %>
+            <li>
+              <%= gravatar_for participant.user %>
+              <%= link_to participant.user.name, participant.user %>
+              <% if @league.isAdmin?(current_user) %>
+                  <div>
+
+                  <% if participant.state==0 %>
+                     signed
+                  <% elsif participant.state==1%>
+                     qualified
+                  <% elsif participant.state==2%>
+                     disqualified
+                  <%end%>
+                  </div>
+                  <div>
+                  <% if participant.state== 0 %>
+                      |   <%=link_to 'Qualify', qualify_participate_path(:id=> participant.id) %>
+                  <% elsif participant.state==1 %>
+                      <%=link_to 'Disqualify', disqualify_participate_path(:id=> participant.id) %>
+                  <%end%>
+                  </div>
+              <% end %>
+            </li>
+        <% end %>
+      </ul>
+      <%= will_paginate @participants %>
+    </ul>
+    </div>
+  </aside3>
+</div>
+

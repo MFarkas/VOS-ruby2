@@ -1,4 +1,47 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+  resources :users do
+    member do
+      get 'participations'
+      get 'events'
+    end
+  end
+  resources :newsposts
+  resources :sessions, only: [:new,:create,:destroy]
+  resources :part_in_events do
+    member do
+      get 'pick'
+      get 'unpick'
+    end
+  end
+  resources :events
+  resources :participates do
+    member do
+      get 'qualify'
+      get 'disqualify'
+    end
+  end
+  resources :leagues do
+    member do
+      get 'participants'
+      get 'manage'
+      get 'events'
+      get 'closeevent'
+      get 'leaderboards'
+    end
+  end
+  get 'static_pages/home'
+  get 'static_pages/contact'
+  #match 'leagues/:id/participants', to: 'leagues#participants', via: 'get'
+  post  '/leagues/:id', to: 'leagues#show'
+  match '/searchleague', to: 'leagues#search', via: 'get'
+  match '/newleague' ,  to: 'leagues#new' ,         via: 'get'
+  match '/signin' ,  to: 'sessions#new' ,         via: 'get'
+  match '/signout' , to: 'sessions#destroy' ,     via: 'delete'
+  match '/home' , to: 'static_pages#home' , via: 'get'
+  match '/help' , to: 'static_pages#help' , via: 'get'
+  match '/signup' , to: 'users#new' , via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

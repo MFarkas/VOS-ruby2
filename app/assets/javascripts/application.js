@@ -12,5 +12,28 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
 //= require_tree .
+$(document).on("focus", "[data-behaviour~='datepicker']", function(e){
+    $(this).datepicker({"format": "yyyy-mm-dd", "weekStart": 1, "autoclose": true});
+});
+
+$(function(e) {
+    $('#timepicker3').timepicker({
+        pickDate: false
+    });
+});
+
+$(function(hello) {
+    $('#timepicker3').visible(false)
+});
+
+$(document).on("focus", "[data-behaviour~='datepicker']", function(e){
+    $(this).datepicker({"format": "yyyy-mm-dd", "weekStart": 1, "autoclose": true});
+});
+
+$(function(e) {
+    $('#timepicker3').timepicker({
+        pickDate: false
+    });
+});

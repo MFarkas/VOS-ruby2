@@ -1,0 +1,30 @@
+<% provide(:title, @league.name) %>
+<h1>Informations</h1>
+
+  <%= render "sidebox"%>
+<div class="row">
+  <ul class="nav pull-right"  >
+    <div class="well">
+    <li>
+      <%@league.locations.each do |location|%>
+      <h5><%= location.name + ' ' %> </h5>
+      <%end%>
+    </li>
+    <li>
+      <%@league.disciplines.each do |discip|%>
+          <h5><%= discip.name + ' ' %></h5>
+      <%end%>
+    </li>
+    <li> <h5><%= @league.begdate %></h5></li>
+    <li><h5><%= @league.expenddate %></h5></li>
+    <li><h5><%= @league.admins.first.user.name%></h5></li>
+
+
+    </div>
+  </ul>
+  <%if !@league.information.nil? %>
+  <div class= "well" style=" float: left;width: 50%; margin: 0px 10px 10px 10px ">
+    <%= @league.information %>
+  </div>
+  <%end%>
+</div>

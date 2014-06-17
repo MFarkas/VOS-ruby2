@@ -1,0 +1,61 @@
+<% provide(:title, @league.name) %>
+<h1><%= @league.name %></h1>
+    <%= render "sidebox"%>
+
+<div class= "well" style="float: right; width: 45%">
+  <%= form_for @league do |f| %>
+      <h4>Change Informations</h4>
+      <div>
+        <%= f.text_area :information,:value => @league.information, cols:20,rows:20 %>
+      </div>
+      <div style="float: left; width: 51%">
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      </div>
+  <% end %>
+ </div>
+
+<div class= "well" style="float: left; width: 45%">
+<%= form_for(@newspost) do |f| %>
+
+    <%=f.hidden_field :league_id, :league_id => @newspost.league_id %>
+    <div>
+      <h4>Create Post</h4>
+      <%= f.label 'Title'%>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label 'Content'%>
+      <%= f.text_area :textcontent, cols:20,rows:20 %>
+    </div>
+    <div>
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    </div>
+<% end %>
+ </div>
+
+<div class= "well"  style="float: right; width: 45%">
+  <%= form_for(@event) do |f| %>
+
+      <%=f.hidden_field :league_id, :league_id => @newspost.league_id %>
+      <div>
+        <h4>Create Event</h4>
+        <%= f.label 'Name'%>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label 'Adress'%>
+        <%= f.text_field :address %>
+      </div>
+      <div>
+        <%= f.label 'Date and Time'%>
+        <%= f.datetime_select :date %>
+      </div>
+      <div >
+        <%= f.label 'Informations'%>
+        <%= f.text_area :info, cols:20,rows:5 %>
+      </div>
+      <div>
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      </div>
+  <% end %>
+</div>

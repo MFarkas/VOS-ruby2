@@ -1,0 +1,66 @@
+<% provide(:title, "New league") %>
+<h1>Create your league</h1>
+
+
+  <div class="span6 offset3">
+    <div class="well" style="padding-bottom: 235px">
+    <%= form_for(@league) do |f| %>
+
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <div style="float: left; width: 100%">
+        <div style="float: left; width: 43%">
+           <%=label_tag :location_id, 'Location' %>
+           <%= f.collection_select :loc, Location.order("name"), :id, :name %>
+           <%= f.text_field :slocation %>
+        </div>
+
+        <div style="float: right; width: 43%">
+          <%=label_tag :location_id, 'Discipline' %>
+          <%= f.collection_select :discipline_id, Discipline.order("name"), :id, :name %>
+          <%= f.text_field :sdiscipline %>
+        </div>
+        </div>
+        <div style="float: left; width: 46%">
+          <%=  f.label 'Begin Date'%>
+          <%= f.text_field :begdate, 'data-behaviour' => 'datepicker' %>
+        </div>
+
+        <div style="float: right; width: 46%">
+          <%=  f.label 'Expected end date'%>
+          <%= f.text_field :expenddate, 'data-behaviour' => 'datepicker' %>
+        </div>
+
+        <div style="float: right; width: 100%">
+        <small>*Some attributes will be filled after your league is created</small>
+        </div>
+        <div style="float: left; width: 100%">
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+        </div>
+    <% end %>
+    </div>
+
+    <script type="text/javascript">
+        var colsel1 = document.getElementById('league_loc');
+        var textsel1 = document.getElementById('league_slocation');
+        colsel1.onchange = function() {
+            if(colsel1.value!=1){
+                textsel1.style['display'] = 'none';
+            }else {
+                textsel1.style['display'] = 'block';
+            }
+        };
+        var colsel2 = document.getElementById('league_discipline_id');
+        var textsel2 = document.getElementById('league_sdiscipline');
+        colsel2.onchange = function() {
+            if(colsel2.value!=1){
+                textsel2.style['display'] = 'none';
+            }else {
+                textsel2.style['display'] = 'block';
+            }
+        };
+    </script>
+
+</div>

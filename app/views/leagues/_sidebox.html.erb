@@ -1,0 +1,16 @@
+<div class = "well" style="float: left; width: 20%">
+<aside2 >
+  <section>
+    <ul class="nav pull-left">
+      <li><%= link_to "Home", league_path %></li>
+      <li><%= link_to "Participants", participants_league_path %></li>
+      <li><%= link_to "Events", events_league_path %></li>
+      <li><%= link_to "Leaderboards", leaderboards_league_path %></li>
+      <li><%= link_to "Informations", edit_league_path %></li>
+      <% if ( !current_user.nil? && @league.isAdmin?(current_user))%>
+          <li><%= link_to "Manage", manage_league_path %></li>
+      <%end%>
+    </ul>
+  </section>
+</aside2>
+</div>

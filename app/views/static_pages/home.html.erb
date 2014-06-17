@@ -1,0 +1,17 @@
+<% provide(:title, "Home") %>
+<div class="center hero-unit">
+  <h1>Welcome to the LeagueA</h1>
+
+  <h2>
+    This is the home page for the LeagueA
+  </h2>
+   <%  if !signed_in?  %>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+      <%end%>
+</div>
+<div>
+  <p>
+
+  </p>
+</div>
+
