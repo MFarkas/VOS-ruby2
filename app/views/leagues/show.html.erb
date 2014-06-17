@@ -10,7 +10,7 @@
 <% if !@league.isParticipating?(current_user)%>
     <%= form_for @participate do |f| %>
         <div style="float: left; width: 80%">
-          <%= f.hidden_field(:league_id,  :league_id => @league.id) %>
+          <%= f.hidden_field(:league_id,  :value => @league.id) %>
           <%= f.submit "Join", class: "btn btn-large btn-primary" %>
         </div>
     <% end %>
