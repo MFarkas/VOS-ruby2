@@ -16,7 +16,7 @@
   <div style=" float: left ; padding-left: 50%;width: 50%  " >
   <h3>News</h3>
   </div>
-  <div style=" float: left ;padding: 5px 5px 5px 5px;margin: 5px 5px 5px 5px;  background-color: #eeeeee ; width: 100%  " >
+  <div style=" float: left ;padding: 5px 5px 5px 5px;margin: 5px 5px 5px 5px; width: 100%  " >
     <% if !@news.nil?%>
     <%  @news.each do |newspost| %>
         <h5><%= newspost.title%>  (<%=newspost.league.name %>)</h5>

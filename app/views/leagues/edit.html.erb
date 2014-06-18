@@ -6,18 +6,29 @@
   <ul class="nav pull-right"  >
     <div class="well">
     <li>
+      <h5><b>Location:</b></h5>
       <%@league.locations.each do |location|%>
-      <h5><%= location.name + ' ' %> </h5>
+      <p style="padding-left: 10px "><%= location.name + ' ' %></p>
       <%end%>
     </li>
     <li>
+      <h5><b>Discipline:</b></h5>
       <%@league.disciplines.each do |discip|%>
-          <h5><%= discip.name + ' ' %></h5>
+          <p style="padding-left: 10px "><%= discip.name + ' ' %></p>
       <%end%>
     </li>
-    <li> <h5><%= @league.begdate %></h5></li>
-    <li><h5><%= @league.expenddate %></h5></li>
-    <li><h5><%= @league.admins.first.user.name%></h5></li>
+    <li>
+      <h5><b>Date of start:</b></h5>
+      <p style="padding-left: 10px "><%= @league.begdate %></p>
+    </li>
+    <li>
+      <h5><b>Expected date of end:</b></h5>
+      <p style="padding-left: 10px "><%= @league.expenddate %></p>
+    </li>
+    <li>
+      <h5><b>Founder:</b></h5>
+      <p style="padding-left: 10px "><%= @league.admins.first.user.name%></p>
+    </li>
 
 
     </div>
