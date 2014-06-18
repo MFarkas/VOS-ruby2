@@ -38,9 +38,13 @@ namespace :db do
       name  = " #{Faker::Name.name} Memorial Cup #{n}"
       offset = rand(Location.count-2)
       location =  Location.order("RANDOM()").first
-      offset2 = rand(Discipline.count-2)
+	  if location.name == " Other"
+        location=  Location.find_by(name: 'Bardejov')
+      end
       disc =  Discipline.order("RANDOM()").first
-      offset3 = rand(User.count-2)
+      if disc.name == " Other"
+        disc=  Discipline.find_by(name: 'Basketbal')
+      end
       admin =  User.order("RANDOM()").first
       l=League.new(name: name,
                      begdate: Date.new(2014,6,10),
