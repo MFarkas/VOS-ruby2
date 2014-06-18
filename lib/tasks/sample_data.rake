@@ -33,6 +33,55 @@ namespace :db do
     Discipline.create!(name: 'Magic&Gathering')
     Discipline.create!(name: 'Wanted')
   end
+    task promodata: :environment do
+    20.times do |n|
+      name  = " #{Faker::Name.name} Memorial Cup #{n}"
+      offset = rand(Location.count-2)
+      location =  Location.order("RANDOM()").first
+      offset2 = rand(Discipline.count-2)
+      disc =  Discipline.order("RANDOM()").first
+      offset3 = rand(User.count-2)
+      admin =  User.order("RANDOM()").first
+      l=League.new(name: name,
+                     begdate: Date.new(2014,6,10),
+                     expenddate: Date.new(2015,6,29)
+                   )
+      l.save!
+      l.place!(location)
+      l.setDisc!(disc)
+      l.setAdmin!(admin)
+      pt= User.order("RANDOM()").limit(10)
+      10.times do |p|
+        Participate.create!(user_id: pt[p].id,
+                            league_id: l.id,
+                            state: 1
+        )
+      end
+      3.times do |p|
+        e=Event.new(league_id: l.id,
+                      date: DateTime.new(2013, 07, 11, 20, 10, 0),
+                      address: "Somewhere",
+                      name: "Event #{n}-#{p}",
+                      info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a rhoncus ligula, in congue justo. Sed sollicitudin ante magna, in eleifend velit dignissim non.',
+                      closed: false
+        )
+        e.save!
+        pt= User.order("RANDOM()").limit(5)
+        5.times do |o|
+          PartInEvent.create!(event_id: e.id,
+                              user_id: pt[o].id,
+          )
+        end
+      end
+      5.times do |p|
+        Newspost.create!(title: 'Lorem Ipsum' ,
+                      textcontent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a rhoncus ligula, in congue justo. Sed sollicitudin ante magna, in eleifend velit dignissim non. Nam porttitor id erat vitae blandit. Quisque fermentum euismod augue, eget tristique purus congue molestie. Mauris malesuada elit at odio auctor lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Vestibulum blandit lorem a nulla lacinia, at tempus eros cursus' ,
+                      league_id: l.id
+        )
+      end
+
+    end
+  end
   task loc: :environment do
     Location.create!(name: ' Other')
     Location.create!(name: 'Banská Štiavnica')
