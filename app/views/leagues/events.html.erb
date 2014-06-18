@@ -16,7 +16,7 @@
               <div><%= event.address %></div>
               <div><%= event.info %></div>
             </li>
-            <% if @league.isAdmin?(current_user)%>
+            <% if signed_in? && @league.isAdmin?(current_user)%>
                 <%=link_to 'Close', closeevent_league_path(:eid=> event.id) %>
             <%end%>
             <%end%>
