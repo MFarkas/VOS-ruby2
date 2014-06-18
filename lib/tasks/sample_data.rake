@@ -44,7 +44,8 @@ namespace :db do
       admin =  User.order("RANDOM()").first
       l=League.new(name: name,
                      begdate: Date.new(2014,6,10),
-                     expenddate: Date.new(2015,6,29)
+                     expenddate: Date.new(2015,6,29),
+                     information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a rhoncus ligula, in congue justo. Sed sollicitudin ante magna, in eleifend velit dignissim non.'
                    )
       l.save!
       l.place!(location)
