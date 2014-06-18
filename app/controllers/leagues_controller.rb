@@ -45,16 +45,31 @@ class LeaguesController < ApplicationController
     #@newsposts= Newspost.new()
   end
   def search
+    li= Location.find_by(id: params[:location_id])
+    di= Discipline.find_by(id: params[:discipline_id])
+    if li.name == " Other" && di.name == " Other"
+      @leagues= League.all.paginate(page: params[:page])
+    elsif li.name == " Other"
+      @leagues = League.joins('JOIN wheres ON wheres.league_id = leagues.id')
+      .joins('JOIN locations ON wheres.location_id = locations.id')
+      .joins('JOIN hows ON hows.league_id = leagues.id')
+      .joins('JOIN disciplines ON hows.discipline_id = disciplines.id')
+      .where("hows.discipline_id = ? ",params[:discipline_id]).paginate(page: params[:page])
+    elsif di.name == " Other"
+      @leagues = League.joins('JOIN wheres ON wheres.league_id = leagues.id')
+      .joins('JOIN locations ON wheres.location_id = locations.id')
+      .joins('JOIN hows ON hows.league_id = leagues.id')
+      .joins('JOIN disciplines ON hows.discipline_id = disciplines.id')
+      .where("wheres.location_id = ? ", params[:location_id]).paginate(page: params[:page])
+    else
+
     @leagues = League.joins('JOIN wheres ON wheres.league_id = leagues.id')
                       .joins('JOIN locations ON wheres.location_id = locations.id')
                       .joins('JOIN hows ON hows.league_id = leagues.id')
                       .joins('JOIN disciplines ON hows.discipline_id = disciplines.id')
                       .where("wheres.location_id = ? AND hows.discipline_id = ? ", params[:location_id],params[:discipline_id]).paginate(page: params[:page])
 
-    #@leagues= League.all.paginate(page: params[:page])
-  end
-  def searchleague
-    @leagues= League.where("slocation = ?", Location.find(params[:location_id]).name)
+    end
   end
   def participate
     @league.participate(current_user)
@@ -95,6 +110,26 @@ class LeaguesController < ApplicationController
     .where("participates.state = 1 AND leagues.id= ? AND part_in_events.user_id= users.id",@league.id)
     .select('users.name ,users.id , sum(score) as totalscore').group("users.id")
 
+  end
+    def delete
+    @league = League.find(params[:id])
+    @league.events.each do |p|
+      p.part_in_events.each do |pie|
+        pie.delete
+      end
+      p.delete
+    end
+    @league.participates.each do |p|
+      p.delete
+    end
+    @league.hows.each do |h|
+      h.delete
+    end
+    @league.wheres.each do |w|
+      w.delete
+    end
+    @league.delete
+    redirect_to leagues_path
   end
   private
 

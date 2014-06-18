@@ -5,12 +5,12 @@
 <table>
   <tr>
     <th> Name </th>
-    <th> Total Score</th>
+    <th style=" padding-left: 250px ; float: right"> Total Score</th>
   </tr>
   <% @points.each do |point| %>
       <tr>
         <td> <%= point.name %> </td>
-        <td><%= point.totalscore %></td>
+        <td style=" padding-left: 250px ; float: right"><%= point.totalscore %></td>
       </tr>
   <%end%>
 </table>

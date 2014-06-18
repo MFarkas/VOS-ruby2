@@ -28,6 +28,7 @@ Rails.application.routes.draw do
       get 'events'
       get 'closeevent'
       get 'leaderboards'
+	  get 'delete'
     end
   end
   get 'static_pages/home'
