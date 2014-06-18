@@ -47,6 +47,12 @@ class LeaguesController < ApplicationController
   def search
     li= Location.find_by(id: params[:location_id])
     di= Discipline.find_by(id: params[:discipline_id])
+	if(li.nil?)
+      li= Location.find_by(name: " Other")
+    end
+    if(di.nil?)
+      di= Discipline.find_by(name: " Other")
+    end
     if li.name == " Other" && di.name == " Other"
       @leagues= League.all.paginate(page: params[:page])
     elsif li.name == " Other"
